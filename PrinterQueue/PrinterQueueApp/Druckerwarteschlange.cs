@@ -16,6 +16,17 @@ public class Druckerwarteschlange
         }
         return null;
     }
-    public string? Naechster { get; }
+
+    public string? Naechster
+    {
+        get
+        {
+            if (queue.Count > 0)
+            {
+                return queue.Peek();
+            }
+            return null;
+        }
+    }
     public int offen { get; }
 }
