@@ -2,9 +2,10 @@ namespace PrinterQueueApp;
 
 public class Druckerwarteschlange
 {
+    Queue<string> queue = new Queue<string>();
     public void Auftrag(string dokument)
     {
-        throw new NotImplementedException();
+        queue.Enqueue(dokument);
     }
     public string? Drucke()
     {
