@@ -9,7 +9,12 @@ public class Druckerwarteschlange
     }
     public string? Drucke()
     {
-        throw new NotImplementedException();
+        if (queue.Count > 0)
+        {
+            string name = queue.Dequeue();
+            return name;
+        }
+        return null;
     }
     public string? Naechster { get; }
     public int offen { get; }
