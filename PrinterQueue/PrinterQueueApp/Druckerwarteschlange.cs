@@ -28,5 +28,12 @@ public class Druckerwarteschlange
             return null;
         }
     }
-    public int offen { get; }
+
+    public int Offen
+    {
+        get
+        {
+            return queue.Count;
+        }
+    }
 }
